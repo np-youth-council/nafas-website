@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAFAS — Every Breath. Our Future.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="nav">
+  <div class="nav-logo" data-page="home">
+    <div class="brand-logo-placeholder"><img src="./nafas_logo.png"></div>
+    <div>
+      <div class="nl-text">NAFAS</div>
+      <div class="nl-sub">Air Intelligence</div>
+    </div>
+  </div>
+  <div class="nav-links">
+    <div class="nav-item-wrapper">
+      <span class="nl" data-section="hero">Home</span>
+      <div class="dropdown-menu">
+        <a href="#hero" class="dropdown-item">Overview</a>
+        <a href="#ecosystem" class="dropdown-item">Ecosystem</a>
+        <a href="#features" class="dropdown-item">Features</a>
+        <a href="#impact" class="dropdown-item">Impact</a>
+        <a href="#faq" class="dropdown-item">FAQ</a>
+        <a href="#partners" class="dropdown-item">Partners</a>
+        <a href="#contact" class="dropdown-item">Contact</a>
+      </div>
+    </div>
+    <div class="nav-item-wrapper">
+      <span class="nl" data-page="map">Live Map</span>
+      <div class="dropdown-menu">
+        <a href="#map" class="dropdown-item">Global Air Quality</a>
+        <a href="#map" class="dropdown-item">Real-time PM2.5</a>
+        <a href="#map" class="dropdown-item">NAFAS Sensor Network</a>
+      </div>
+    </div>
+    <div class="nav-item-wrapper">
+      <span class="nl" data-page="dash">Dashboard</span>
+      <div class="dropdown-menu">
+        <a href="#dash" class="dropdown-item">Analytics</a>
+        <a href="#dash" class="dropdown-item">Trends</a>
+        <a href="#dash" class="dropdown-item">Rankings</a>
+      </div>
+    </div>
+    <div class="nav-item-wrapper">
+      <span class="nl" data-page="forecast">AI Forecast</span>
+      <div class="dropdown-menu">
+        <a href="#forecast" class="dropdown-item">48h Prediction</a>
+        <a href="#forecast" class="dropdown-item">AI Model</a>
+        <a href="#forecast" class="dropdown-item">Confidence Data</a>
+      </div>
+    </div>
+    <div class="nav-item-wrapper">
+      <span class="nl" data-page="schools">School Alerts</span>
+      <div class="dropdown-menu">
+        <a href="#schools" class="dropdown-item">Alert System</a>
+        <a href="#schools" class="dropdown-item">Registered Schools</a>
+        <a href="#schools" class="dropdown-item">Safety Protocols</a>
+      </div>
+    </div>
+    <div class="nav-item-wrapper">
+      <span class="nl" data-page="filters">Filter System</span>
+      <div class="dropdown-menu">
+        <a href="#filters" class="dropdown-item">Technology</a>
+        <a href="#filters" class="dropdown-item">Deployments</a>
+        <a href="#filters" class="dropdown-item">Performance</a>
+      </div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="nav-search-wrap">
+      <span class="search-icon">🔍</span>
+      <input class="nav-search" id="navSearch" placeholder="Search city...">
+      <div class="search-dropdown" id="searchDrop"></div>
+    </div>
+    <div class="theme-btn" id="themeBtn" title="Toggle theme">🌙</div>
+    <div class="hamburger" id="hamburger">
+      <div class="hb-line"></div>
+      <div class="hb-line"></div>
+      <div class="hb-line"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-nav" id="mobileNav">
+  <span class="mn-link" data-page="home">🏠 Home</span>
+  <span class="mn-link" data-page="map">🗺️ Live Map</span>
+  <span class="mn-link" data-page="dash">📊 Dashboard</span>
+  <span class="mn-link" data-page="forecast">🤖 AI Forecast</span>
+  <span class="mn-link" data-page="schools">🏫 School Alerts</span>
+  <span class="mn-link" data-page="filters">🔧 Filter System</span>
+</div>
+
+<!-- ==================== HOME PAGE ==================== -->
+<div class="page on" id="page-home">
+  <!-- Live Ticker -->
+  <div class="ticker">
+    <div class="ticker-badge">LIVE AQI</div>
+    <div class="ticker-inner" id="tickerTrack"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero reveal">
+    <div class="hero-glow"></div>
+    <div class="hero-eyebrow">Oxford Said Global Climate Tech Challenge 2026</div>
+    <h1 class="hero-h1">Every <span class="c">Breath</span><br>Tracked. <span class="g">Protected.</span></h1>
+    <p class="hero-p">NAFAS combines a patented spiral exhaust filter with AI-powered monitoring to fight transport air pollution where it starts — at the exhaust pipe — and track it in real time across 52 cities worldwide.</p>
+    <div class="hero-btns">
+      <button class="btn btn-p btn-xl" data-page="map">🌍 Open Live Map</button>
+      <button class="btn btn-g btn-xl" data-page="filters">🔧 How the Filter Works</button>
+    </div>
+    <div class="stats-row">
+      <div class="sc reveal"><div class="sc-n" id="statCities">0</div><div class="sc-l">Cities Monitored</div></div>
+      <div class="sc reveal"><div class="sc-n" id="statUnits">0</div><div class="sc-l">NAFAS Units Active</div></div>
+      <div class="sc reveal"><div class="sc-n" id="statDeaths">0</div><div class="sc-l">K Deaths/Year Targeted</div></div>
+      <div class="sc reveal"><div class="sc-n" id="statAlerts">0</div><div class="sc-l">School Alerts Sent</div></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Ecosystem Section -->
+  <section id="ecosystem" class="sec reveal">
+    <div class="sec-ey">The NAFAS Ecosystem</div>
+    <div class="sec-h">One Integrated System. Filter → Sensor → Data → Action.</div>
+    <div class="sec-p">NAFAS is not just a monitoring website. It is a complete ecosystem: a physical filter installed on diesel exhaust pipes that captures PM2.5, an embedded sensor that transmits live air quality data, and an AI platform that maps, predicts, and alerts.</div>
+    <div class="eco-flow" id="ecoFlow"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Features Section -->
+  <section id="features" class="sec reveal">
+    <div class="sec-ey">Platform Capabilities</div>
+    <div class="sec-h">Built for Every Stakeholder</div>
+    <div class="feat-grid" id="featuresGrid"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Impact Section -->
+  <section id="impact" class="sec reveal" style="text-align:center">
+    <div class="sec-ey">Global Impact</div>
+    <div class="sec-h">Why This Matters</div>
+    <div class="impact-grid" id="impactGrid"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="sec reveal">
+    <div class="sec-ey">Common Questions</div>
+    <div class="sec-h" style="margin-bottom:24px">FAQ</div>
+    <div class="faq-list" id="faqList"></div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Partners Section -->
+  <section id="partners" class="sec reveal" style="text-align:center">
+    <div class="sec-ey">Institutional Partners</div>
+    <div class="sec-h" style="margin-bottom:24px">Supported by Global Organizations</div>
+    <div class="partners" id="partnersList"></div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="sec reveal">
+    <div class="sec-ey">Get in Touch</div>
+    <div class="sec-h">Contact NAFAS</div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="sec-p" style="margin-bottom:20px">For partnership inquiries, data access requests, or to deploy NAFAS filters in your city, reach out to our team.</div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--txt2)">
+          <div>📍 <strong style="color:var(--txt)">Location:</strong> School №26, Qarshi, Uzbekistan</div>
+          <div>📧 <strong style="color:var(--txt)">Email:</strong> team@nafas.uz</div>
+          <div>🌐 <strong style="color:var(--txt)">Project:</strong> Oxford Said Climate Tech Challenge 2026</div>
+          <div>📊 <strong style="color:var(--txt)">Data API:</strong> Powered by Open-Meteo (free, open access)</div>
+        </div>
+      </div>
+      <div class="card card-p reveal" style="display:flex;flex-direction:column;gap:12px">
+        <div class="fg-group"><label class="fg-lbl">Name</label><input class="fg-inp" placeholder="Your name" id="contactName"></div>
+        <div class="fg-group"><label class="fg-lbl">Email</label><input class="fg-inp" type="email" placeholder="your@email.com" id="contactEmail"></div>
+        <div class="fg-group"><label class="fg-lbl">Message</label><textarea class="fg-inp" rows="4" placeholder="How can we help?" id="contactMsg" style="resize:vertical"></textarea></div>
+        <button class="btn btn-p" id="sendContactBtn">Send Message</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="reveal">
+    <div class="footer-inner">
+      <div>
+        <div class="fi-brand">NAFAS</div>
+        <div class="fi-sub">EVERY BREATH. OUR FUTURE.</div>
+        <div class="fi-p">An integrated exhaust filtration and AI monitoring system. Designed in Uzbekistan for the world.</div>
+      </div>
+      <div>
+        <div class="fi-col-title">Platform</div>
+        <span class="fi-link" data-page="map">Live Map</span>
+        <span class="fi-link" data-page="dash">Dashboard</span>
+        <span class="fi-link" data-page="forecast">AI Forecast</span>
+        <span class="fi-link" data-page="schools">School Alerts</span>
+        <span class="fi-link" data-page="filters">Filter System</span>
+      </div>
+      <div>
+        <div class="fi-col-title">Resources</div>
+        <span class="fi-link">Research Papers</span>
+        <span class="fi-link">API Documentation</span>
+        <span class="fi-link">Deployment Guide</span>
+        <span class="fi-link">Open Data</span>
+      </div>
+      <div>
+        <div class="fi-col-title">Project</div>
+        <span class="fi-link">About NAFAS</span>
+        <span class="fi-link">Oxford Said 2026</span>
+        <span class="fi-link">Partnerships</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="fb-left">© 2026 NAFAS Team · School №26, Qarshi, Uzbekistan · Oxford Said Global Climate Tech Challenge</div>
+      <span class="admin-link" id="adminLink">⚙ Admin</span>
+    </div>
+  </footer>
+</div>
+
+<!-- Toast Container -->
+<div class="toast-c" id="toastContainer"></div>
+
+<script src="./script.js"></script>
+</body>
+</html>
